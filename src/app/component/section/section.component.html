@@ -1,0 +1,11 @@
+<section [className]="sectionClass" [id]="sectionId">
+  <header [innerHTML]="headerElement"></header>
+  <div class="content" *ngIf="!hasGallery" [innerHTML]="contentElement">
+    <app-inner-section [sectionName]="'first'"></app-inner-section>
+  </div>
+  <div class="content" *ngIf="hasGallery">
+    <app-inner-section [sectionName]="'first'"></app-inner-section>
+    <app-inner-section [sectionName]="'second'"></app-inner-section>
+    <app-inner-section [sectionName]="'third'"></app-inner-section>
+  </div>
+</section>
