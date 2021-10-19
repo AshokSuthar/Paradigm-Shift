@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { default as webData } from '../../data.json';
 
 @Component({
   selector: 'app-section',
@@ -23,57 +24,31 @@ export class SectionComponent implements OnInit {
 
   setSectionData() {
     if (this.currentSection === 'intro') {
-      this.sectionClass = 'intro';
-      this.headerElement = `<h1>Paradigm Shift</h1>
-      <p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
-      <ul class="actions">
-        <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-      </ul>`;
-      this.contentElement = `<span class="image fill" data-position="center"><img src="images/pic01.jpg" alt="" /></span>`;
+      this.sectionClass = webData[0].sectionData.intro.sectionClass;
+      this.sectionId = webData[0].sectionData.intro.sectionId;
+      this.headerElement = webData[0].sectionData.intro.headerElement;
+      this.contentElement = webData[0].sectionData.intro.contentElement;
     }
 
     if (this.currentSection === 'first') {
-      this.sectionId = 'first';
-      this.headerElement = `<h2>Magna sed nullam nisl adipiscing</h2>`;
-      this.contentElement = `<p>
-      <strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit.
-      Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-      torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-      libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula
-      ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem
-      adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat
-      magna tempus, sed et lorem adipiscing.
-    </p>
-    <span class="image main"><img src="assets/images/pic02.jpg" alt="" /></span>`;
+      this.sectionClass = webData[0].sectionData.first.sectionClass;
+      this.sectionId = webData[0].sectionData.first.sectionId;
+      this.headerElement = webData[0].sectionData.first.headerElement;
+      this.contentElement = webData[0].sectionData.first.contentElement;
     }
 
     if (this.currentSection === 'second') {
-      this.headerElement = `<h2>Feugiat consequat tempus ultrices</h2>`;
-      this.contentElement = `<p>
-      <strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum.
-      Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.
-    </p>
-    <ul class="feature-icons">
-      <li class="icon solid fa-laptop">Consequat tempus</li>
-      <li class="icon solid fa-bolt">Etiam adipiscing</li>
-      <li class="icon solid fa-signal">Libero nullam</li>
-      <li class="icon solid fa-cog">Blandit condimentum</li>
-      <li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
-      <li class="icon solid fa-code">Nibh amet venenatis</li>
-    </ul>
-    <p>
-      Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et
-      lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero,
-      feugiat magna tempus, sed et lorem adipiscing.
-    </p>`;
+      this.sectionClass = webData[0].sectionData.second.sectionClass;
+      this.sectionId = webData[0].sectionData.second.sectionId;
+      this.headerElement = webData[0].sectionData.second.headerElement;
+      this.contentElement = webData[0].sectionData.second.contentElement;
     }
 
     if (this.currentSection === 'third') {
-      this.headerElement = `<h2>Ultrices erat magna sed condimentum</h2>`;
-      this.contentElement = `<p>
-        <strong>Integer mollis egestas</strong> nam maximus erat id euismod
-        egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.
-      </p><p>hadhakja</p><ng-template adHost></ng-template>`;
+      this.sectionClass = webData[0].sectionData.third.sectionClass;
+      this.sectionId = webData[0].sectionData.third.sectionId;
+      this.headerElement = webData[0].sectionData.third.headerElement;
+      this.contentElement = webData[0].sectionData.third.contentElement;
       this.hasGallery = true;
     }
   }

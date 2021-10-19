@@ -14,6 +14,5 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentImgData = this.imgData;
-    console.log('logging image data', this.currentImgData);
   }
 }
